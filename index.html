@@ -1,897 +1,990 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/x-icon" href="favicon.png" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>King Foot Massage</title>
-    <meta
-      name="description"
-      content="Experience ultimate relaxation at King Foot Massage, known for exceptional massages tailored to your needs. Clients love our serene environment, skilled therapists, and personalized care. Unwind and recharge with us."
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Matemasie&display=swap"
-      rel="stylesheet"
-    />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asian Charm Spa | Premium Massage & Relaxation</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
     <style>
-      /* Comfort Spa Stylesheet */
-
-      /* Base Styles */
-      body {
-        font-family: 'Josefin Sans', sans-serif;
-        margin: 0;
-        padding: 0;
-        background-color: #f9f9f9;
-        color: #333;
-        line-height: 1.6;
-      }
-
-      h1, h2, h3, h4, h5, h6 {
-        font-weight: 600;
-        margin-bottom: 1rem;
-      }
-
-      section {
-        padding: 60px 20px;
-        text-align: center;
-      }
-
-      section h2 {
-        font-size: 2.5rem;
-        margin-bottom: 1.5rem;
-        color: #333;
-      }
-
-      section h4 {
-        font-size: 1.2rem;
-        color: #666;
-        margin-bottom: 2rem;
-      }
-
-      /* Navigation */
-      nav {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding: 1rem;
-        background-color: #6B73FF; /* Calming purple-blue background */
-        position: fixed;
-        top: 0;
-        width: 100%;
-        z-index: 1000;
-        box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-      }
-
-      /* Add margin to the top of the body to avoid content being hidden behind the fixed nav */
-      body {
-        margin-top: 70px; /* Adjust based on nav height */
-      }
-
-      nav img {
-        height: 50px;
-      }
-
-      nav ul {
-        list-style: none;
-        display: flex;
-        margin: 0;
-        padding: 0;
-      }
-
-      nav ul li {
-        margin-left: 20px;
-      }
-
-      nav ul li a {
-        color: white;
-        text-decoration: none;
-        font-size: 1.1rem;
-        transition: color 0.3s ease;
-      }
-
-      nav ul li a:hover {
-        color: #FFD700;
-      }
-
-      /* Home Section */
-      .home {
-        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-        background-size: cover;
-        background-position: center;
-        height: 100vh;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        color: white;
-        text-align: center;
-        margin-top: 70px;
-        position: relative;
-        overflow: hidden;
-      }
-
-      .home::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" fill="white" opacity="0.1"><path d="M0,20 Q250,80 500,20 T1000,20 V100 H0 Z"/></svg>') repeat-x;
-        background-size: 1000px 100px;
-        animation: wave 10s linear infinite;
-      }
-
-      @keyframes wave {
-        0% { background-position-x: 0; }
-        100% { background-position-x: 1000px; }
-      }
-
-      .home-content {
-        background-color: rgba(255, 255, 255, 0.1);
-        backdrop-filter: blur(10px);
-        padding: 40px;
-        border-radius: 20px;
-        max-width: 800px;
-        margin-bottom: 30px;
-        border: 1px solid rgba(255, 255, 255, 0.2);
-        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
-      }
-
-      .home h1 {
-        font-size: 3.5rem;
-        margin-bottom: 20px;
-        text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
-        color: #FFD700;
-        font-weight: 300;
-        letter-spacing: 2px;
-      }
-
-      .spa-tagline {
-        font-size: 1.3rem;
-        margin-bottom: 20px;
-        opacity: 0.9;
-        font-style: italic;
-      }
-
-      /* Gallery Section */
-      #gallery {
-        background: linear-gradient(135deg, #f0f4ff 0%, #e1ecff 100%);
-        padding: 60px 20px;
-      }
-
-      .gallery-container {
-        max-width: 1200px;
-        margin: 0 auto;
-      }
-
-      .gallery-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-        gap: 25px;
-        margin: 40px 0;
-      }
-
-      .gallery-item {
-        position: relative;
-        overflow: hidden;
-        border-radius: 15px;
-        box-shadow: 0 8px 25px rgba(0,0,0,0.1);
-        transition: all 0.3s ease;
-        cursor: pointer;
-        background: white;
-        aspect-ratio: 4/3;
-      }
-
-      .gallery-item:hover {
-        transform: translateY(-8px);
-        box-shadow: 0 15px 35px rgba(0,0,0,0.2);
-      }
-
-      .gallery-item img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        transition: transform 0.3s ease;
-      }
-
-      .gallery-item:hover img {
-        transform: scale(1.05);
-      }
-
-      .gallery-overlay {
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background: linear-gradient(135deg, rgba(107, 115, 255, 0.8), rgba(118, 75, 162, 0.8));
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        opacity: 0;
-        transition: opacity 0.3s ease;
-      }
-
-      .gallery-item:hover .gallery-overlay {
-        opacity: 1;
-      }
-
-      .gallery-overlay-text {
-        color: white;
-        text-align: center;
-        padding: 20px;
-      }
-
-      .gallery-overlay h3 {
-        font-size: 1.5rem;
-        margin-bottom: 10px;
-        color: white;
-      }
-
-      .gallery-overlay p {
-        font-size: 1rem;
-        opacity: 0.9;
-      }
-
-      /* Modal for full-size image viewing */
-      .modal {
-        display: none;
-        position: fixed;
-        z-index: 2000;
-        left: 0;
-        top: 0;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(0,0,0,0.9);
-        animation: fadeIn 0.3s ease;
-      }
-
-      .modal.active {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-      }
-
-      @keyframes fadeIn {
-        from { opacity: 0; }
-        to { opacity: 1; }
-      }
-
-      .modal-content {
-        position: relative;
-        max-width: 90%;
-        max-height: 90%;
-        margin: auto;
-      }
-
-      .modal-content img {
-        width: 100%;
-        height: auto;
-        border-radius: 10px;
-        box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-      }
-
-      .close-modal {
-        position: absolute;
-        top: -40px;
-        right: 0;
-        color: white;
-        font-size: 35px;
-        font-weight: bold;
-        cursor: pointer;
-        background: none;
-        border: none;
-        transition: color 0.3s ease;
-      }
-
-      .close-modal:hover {
-        color: #6B73FF;
-      }
-
-      .gallery-nav {
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        background: rgba(255,255,255,0.2);
-        backdrop-filter: blur(10px);
-        color: white;
-        border: none;
-        font-size: 24px;
-        padding: 15px 20px;
-        cursor: pointer;
-        border-radius: 50%;
-        transition: all 0.3s ease;
-      }
-
-      .gallery-nav:hover {
-        background: rgba(255,255,255,0.3);
-        transform: translateY(-50%) scale(1.1);
-      }
-
-      .prev-btn {
-        left: -60px;
-      }
-
-      .next-btn {
-        right: -60px;
-      }
-
-      /* Call and Book Online Section */
-      .contact-buttons {
-        display: flex;
-        gap: 20px;
-        justify-content: center;
-        flex-wrap: wrap;
-        margin-top: 20px;
-      }
-
-      .contact-card {
-        background: rgba(255, 255, 255, 0.95);
-        backdrop-filter: blur(10px);
-        color: #333;
-        padding: 30px;
-        border-radius: 15px;
-        box-shadow: 0 8px 25px rgba(0,0,0,0.2);
-        min-width: 300px;
-        transition: all 0.3s ease;
-        border: 1px solid rgba(255, 255, 255, 0.3);
-      }
-
-      .contact-card:hover {
-        transform: translateY(-8px);
-        box-shadow: 0 12px 35px rgba(0,0,0,0.25);
-      }
-
-      .contact-card h3 {
-        color: #6B73FF;
-        font-size: 1.6rem;
-        margin-bottom: 15px;
-        font-weight: 500;
-      }
-
-      .phone-number {
-        font-size: 1.9rem;
-        font-weight: bold;
-        color: #764ba2;
-        text-decoration: none;
-        display: block;
-        margin: 15px 0;
-        transition: color 0.3s ease;
-      }
-
-      .phone-number:hover {
-        color: #667eea;
-      }
-
-      .contact-card p {
-        color: #666;
-        line-height: 1.5;
-      }
-
-      /* Booking Form */
-      .booking-form {
-        display: none;
-        background: rgba(255, 255, 255, 0.98);
-        backdrop-filter: blur(15px);
-        color: #333;
-        padding: 35px;
-        border-radius: 20px;
-        box-shadow: 0 15px 40px rgba(0,0,0,0.3);
-        max-width: 550px;
-        margin: 20px auto;
-        position: relative;
-        border: 1px solid rgba(255, 255, 255, 0.4);
-      }
-
-      .booking-form.active {
-        display: block;
-        animation: slideIn 0.3s ease-out;
-      }
-
-      @keyframes slideIn {
-        from { opacity: 0; transform: translateY(-20px); }
-        to { opacity: 1; transform: translateY(0); }
-      }
-
-      .booking-form h3 {
-        color: #6B73FF;
-        margin-bottom: 25px;
-        font-size: 2rem;
-        font-weight: 400;
-      }
-
-      .form-group {
-        margin-bottom: 20px;
-        text-align: left;
-      }
-
-      .form-group label {
-        display: block;
-        margin-bottom: 8px;
-        font-weight: 600;
-        color: #555;
-        font-size: 0.95rem;
-      }
-
-      .form-group input,
-      .form-group select,
-      .form-group textarea {
-        width: 100%;
-        padding: 15px;
-        border: 2px solid #e0e0e0;
-        border-radius: 10px;
-        font-size: 1rem;
-        font-family: inherit;
-        transition: all 0.3s ease;
-        box-sizing: border-box;
-        background: rgba(255, 255, 255, 0.8);
-      }
-
-      .form-group input:focus,
-      .form-group select:focus,
-      .form-group textarea:focus {
-        outline: none;
-        border-color: #6B73FF;
-        background: white;
-        box-shadow: 0 0 0 3px rgba(107, 115, 255, 0.1);
-      }
-
-      .form-row {
-        display: flex;
-        gap: 15px;
-      }
-
-      .form-row .form-group {
-        flex: 1;
-      }
-
-      .close-form {
-        position: absolute;
-        top: 15px;
-        right: 20px;
-        background: none;
-        border: none;
-        font-size: 28px;
-        cursor: pointer;
-        color: #999;
-        transition: color 0.3s ease;
-      }
-
-      .close-form:hover {
-        color: #333;
-        transform: scale(1.1);
-      }
-
-      /* Button Styles */
-      .book-button, .call-button {
-        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-        color: white;
-        padding: 15px 30px;
-        border: none;
-        border-radius: 25px;
-        text-decoration: none;
-        display: inline-block;
-        font-size: 1.1rem;
-        font-weight: 600;
-        transition: all 0.3s ease;
-        margin: 10px;
-        cursor: pointer;
-        text-align: center;
-        box-shadow: 0 4px 15px rgba(107, 115, 255, 0.3);
-      }
-
-      .book-button:hover, .call-button:hover {
-        transform: translateY(-3px);
-        box-shadow: 0 6px 20px rgba(107, 115, 255, 0.4);
-      }
-
-      .submit-btn {
-        background: linear-gradient(135deg, #6B73FF 0%, #764ba2 100%);
-        color: white;
-        padding: 18px 35px;
-        border: none;
-        border-radius: 25px;
-        font-size: 1.2rem;
-        font-weight: 600;
-        cursor: pointer;
-        width: 100%;
-        transition: all 0.3s ease;
-        margin-top: 15px;
-        box-shadow: 0 4px 15px rgba(107, 115, 255, 0.3);
-      }
-
-      .submit-btn:hover {
-        transform: translateY(-2px);
-        box-shadow: 0 6px 20px rgba(107, 115, 255, 0.4);
-      }
-
-      /* Services and Reviews Containers */
-      .services, .reviews-container {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 25px;
-        margin: 40px 0;
-      }
-
-      #services {
-        background: linear-gradient(135deg, #f5f7ff 0%, #e8f2ff 100%);
-      }
-
-      #specials {
-        background: linear-gradient(135deg, #fff5f5 0%, #ffe8e8 100%);
-      }
-
-      #specials .services {
-        background: transparent;
-      }
-
-      /* Service Box and Review Card */
-      .service-box, .review-card {
-        background: white;
-        margin: 10px;
-        padding: 30px;
-        border-radius: 15px;
-        box-shadow: 0 5px 20px rgba(0,0,0,0.08);
-        width: 320px;
-        transition: all 0.3s ease;
-        border: 1px solid rgba(107, 115, 255, 0.1);
-      }
-
-      .service-box:hover {
-        transform: translateY(-8px);
-        box-shadow: 0 10px 30px rgba(0,0,0,0.15);
-        border-color: rgba(107, 115, 255, 0.3);
-      }
-
-      .service-box h3, .review-card h3 {
-        color: #6B73FF;
-        font-size: 1.6rem;
-        margin-bottom: 15px;
-        font-weight: 500;
-      }
-
-      .service-box p, .review-card p {
-        color: #666;
-        line-height: 1.7;
-      }
-
-      /* Price Wrapper */
-      .service-box .price-wrapper {
-        margin-top: 20px;
-        background: linear-gradient(135deg, #f8f9ff 0%, #eef1ff 100%);
-        padding: 15px;
-        border-radius: 10px;
-        display: none;
-        min-height: 100px;
-        border-left: 4px solid #6B73FF;
-      }
-
-      .price-wrapper h4 {
-        margin: 5px 0;
-        color: #333;
-        font-size: 1.1rem;
-      }
-
-      /* Contact Section */
-      #contact {
-        background: linear-gradient(135deg, #e8f5e9 0%, #d4eddb 100%);
-      }
-
-      .appointment-card {
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
-        max-width: 1200px;
-        margin: 0 auto;
-      }
-
-      .appointment-map {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        background: white;
-        padding: 40px;
-        border-radius: 20px;
-        box-shadow: 0 8px 25px rgba(0,0,0,0.1);
-        border: 1px solid rgba(107, 115, 255, 0.1);
-      }
-
-      .appointment-info {
-        margin-top: 30px;
-        text-align: left;
-        width: 100%;
-      }
-
-      .appointment-info p {
-        margin: 15px 0;
-        font-size: 1.2rem;
-        color: #555;
-      }
-
-      .appointment-info a {
-        color: #6B73FF;
-        text-decoration: none;
-        transition: color 0.3s ease;
-        font-weight: 600;
-      }
-
-      .appointment-info a:hover {
-        color: #764ba2;
-        text-decoration: underline;
-      }
-
-      .appointment-map h3 {
-        margin-top: 25px;
-        color: #6B73FF;
-        font-size: 1.4rem;
-        font-weight: 500;
-      }
-
-      /* Footer */
-      footer {
-        background: linear-gradient(135deg, #333 0%, #555 100%);
-        color: white;
-        text-align: center;
-        padding: 30px 0;
-        margin-top: 50px;
-      }
-
-      /* Responsive Design */
-      @media (max-width: 768px) {
+        :root {
+            --primary: #9b7e56; /* Soft gold/bronze */
+            --primary-dark: #7a6140;
+            --bg-color: #f9f8f6; /* Soft beige */
+            --text-dark: #2c2a28;
+            --text-light: #6e6b66;
+            --white: #ffffff;
+            --glass-bg: rgba(255, 255, 255, 0.75);
+            --glass-border: rgba(255, 255, 255, 0.4);
+            --shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+            --transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-dark);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: 600;
+        }
+
+        /* --- Navigation --- */
         nav {
-          flex-direction: column;
-          padding: 15px;
-        }
-        
-        nav ul {
-          margin-top: 15px;
-        }
-        
-        .home h1 {
-          font-size: 2.5rem;
-        }
-
-        .contact-buttons {
-          flex-direction: column;
-          align-items: center;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 20px 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+            transition: var(--transition);
+            background: transparent;
         }
 
-        .contact-card {
-          min-width: auto;
-          width: 90%;
-          max-width: 400px;
+        nav.scrolled {
+            background: var(--glass-bg);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+            padding: 15px 50px;
         }
 
-        .form-row {
-          flex-direction: column;
-        }
-        
-        .service-box, .review-card {
-          width: 100%;
-          max-width: 400px;
-        }
-
-        .gallery-grid {
-          grid-template-columns: 1fr;
-          gap: 20px;
+        .logo {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 28px;
+            font-weight: 600;
+            color: var(--primary);
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: 2px;
         }
 
-        .gallery-nav {
-          display: none;
+        .nav-links {
+            display: flex;
+            gap: 30px;
         }
 
-        .modal-content {
-          max-width: 95%;
-          max-height: 85%;
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-dark);
+            font-weight: 500;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: color 0.3s;
         }
-      }
 
-      @media (max-width: 480px) {
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 24px;
+            cursor: pointer;
+            color: var(--text-dark);
+        }
+
+        /* --- Hero Section --- */
+        #home {
+            position: relative;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .hero-bg-carousel {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 120%; /* Extra height for parallax */
+            z-index: -1;
+        }
+
+        .hero-bg-carousel img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0;
+            transition: opacity 2s ease-in-out;
+            filter: brightness(0.6);
+        }
+
+        .hero-bg-carousel img.active {
+            opacity: 1;
+        }
+
+        .hero-content {
+            text-align: center;
+            color: var(--white);
+            max-width: 800px;
+            padding: 0 20px;
+            /* Parallax applied via JS */
+        }
+
+        .hero-content h1 {
+            font-size: 64px;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 8px rgba(0,0,0,0.3);
+            letter-spacing: 2px;
+        }
+
+        .hero-content p {
+            font-size: 20px;
+            margin-bottom: 40px;
+            font-weight: 300;
+            letter-spacing: 1px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 16px 40px;
+            background-color: var(--primary);
+            color: var(--white);
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            border-radius: 50px;
+            transition: var(--transition);
+            border: 1px solid var(--primary);
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background-color: transparent;
+            color: var(--primary);
+            background: var(--glass-bg);
+            backdrop-filter: blur(5px);
+            border-color: var(--white);
+        }
+
+        /* --- General Sections --- */
         section {
-          padding: 40px 15px;
-        }
-        
-        section h2 {
-          font-size: 2rem;
-        }
-        
-        .home-content {
-          padding: 25px;
-        }
-        
-        .home h1 {
-          font-size: 2rem;
-        }
-        
-        .book-button, .call-button {
-          padding: 12px 25px;
-          font-size: 1rem;
+            padding: 100px 10vw;
+            position: relative;
         }
 
-        .phone-number {
-          font-size: 1.6rem;
+        .section-title {
+            text-align: center;
+            font-size: 42px;
+            color: var(--text-dark);
+            margin-bottom: 20px;
+            position: relative;
         }
 
-        .gallery-grid {
-          grid-template-columns: 1fr;
-          gap: 15px;
-          margin: 20px 0;
+        .section-subtitle {
+            text-align: center;
+            color: var(--primary);
+            font-size: 16px;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            margin-bottom: 60px;
+            display: block;
         }
-      }
+
+        /* --- Scroll Reveal Animations --- */
+        .reveal {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: all 1s cubic-bezier(0.5, 0, 0, 1);
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* --- About Us --- */
+        #about {
+            background: var(--bg-color);
+            position: relative;
+            z-index: 2;
+        }
+
+        .about-glass-card {
+            background: var(--glass-bg);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid var(--glass-border);
+            border-radius: 30px;
+            padding: 60px 80px;
+            text-align: center;
+            box-shadow: var(--shadow);
+            max-width: 900px;
+            margin: -150px auto 0; /* Overlap hero */
+            position: relative;
+        }
+
+        .about-glass-card p {
+            font-size: 18px;
+            color: var(--text-light);
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+
+        /* --- Decorative Parallax Elements --- */
+        .decoration {
+            position: absolute;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--primary) 0%, transparent 100%);
+            opacity: 0.1;
+            z-index: -1;
+            filter: blur(40px);
+        }
+        .dec-1 { width: 300px; height: 300px; top: 10%; left: -100px; }
+        .dec-2 { width: 400px; height: 400px; bottom: 20%; right: -150px; }
+
+        /* --- Services --- */
+        #services {
+            background-color: var(--white);
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 40px;
+            perspective: 1000px;
+        }
+
+        .service-card {
+            background: var(--white);
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            border: 1px solid rgba(0,0,0,0.03);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.12);
+        }
+
+        .carousel-container {
+            width: 100%;
+            height: 250px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .carousel-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+        }
+
+        .carousel-container img.active {
+            opacity: 1;
+        }
+
+        .card-content {
+            padding: 30px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card-content h3 {
+            font-size: 26px;
+            margin-bottom: 10px;
+            color: var(--text-dark);
+        }
+
+        .card-desc {
+            font-size: 14px;
+            color: var(--text-light);
+            margin-bottom: 20px;
+            flex-grow: 1;
+        }
+
+        .pricing-list {
+            list-style: none;
+            border-top: 1px solid rgba(0,0,0,0.05);
+            padding-top: 15px;
+        }
+
+        .pricing-list li {
+            display: flex;
+            justify-content: space-between;
+            font-size: 15px;
+            margin-bottom: 8px;
+            color: var(--text-dark);
+            font-weight: 500;
+        }
+
+        .pricing-list span.note {
+            display: block;
+            font-size: 12px;
+            color: var(--primary);
+            font-weight: 400;
+            margin-top: -4px;
+            margin-bottom: 8px;
+        }
+
+        /* --- Testimonials --- */
+        #testimonials {
+            background: var(--bg-color);
+            overflow: hidden;
+            padding: 100px 0; /* Full width for marquee */
+        }
+
+        .marquee-wrapper {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .marquee {
+            display: flex;
+            overflow: hidden;
+            user-select: none;
+            gap: 30px;
+        }
+
+        .marquee-content {
+            flex-shrink: 0;
+            display: flex;
+            justify-content: space-around;
+            gap: 30px;
+            min-width: 100%;
+            animation: scroll-left 40s linear infinite;
+        }
+
+        .marquee-content.reverse {
+            animation: scroll-right 40s linear infinite;
+        }
+
+        @keyframes scroll-left {
+            from { transform: translateX(0); }
+            to { transform: translateX(-100%); }
+        }
+
+        @keyframes scroll-right {
+            from { transform: translateX(-100%); }
+            to { transform: translateX(0); }
+        }
+
+        .review-card {
+            background: var(--white);
+            padding: 30px;
+            border-radius: 20px;
+            width: 350px;
+            box-shadow: var(--shadow);
+            border: 1px solid rgba(0,0,0,0.02);
+            flex-shrink: 0;
+        }
+
+        .stars {
+            color: #ffb400;
+            font-size: 18px;
+            margin-bottom: 15px;
+        }
+
+        .review-text {
+            font-size: 15px;
+            color: var(--text-light);
+            font-style: italic;
+            margin-bottom: 20px;
+        }
+
+        .reviewer {
+            font-weight: 600;
+            font-size: 14px;
+            color: var(--text-dark);
+        }
+
+        /* --- FAQ --- */
+        #faq {
+            background: var(--white);
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            border-bottom: 1px solid rgba(0,0,0,0.1);
+            margin-bottom: 10px;
+        }
+
+        .faq-question {
+            width: 100%;
+            background: none;
+            border: none;
+            text-align: left;
+            padding: 20px 0;
+            font-size: 18px;
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: 600;
+            color: var(--text-dark);
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: var(--transition);
+        }
+
+        .faq-question:hover {
+            color: var(--primary);
+        }
+
+        .faq-question::after {
+            content: '+';
+            font-size: 24px;
+            transition: transform 0.3s;
+        }
+
+        .faq-question.active::after {
+            transform: rotate(45deg);
+            color: var(--primary);
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease-out;
+        }
+
+        .faq-answer p {
+            padding-bottom: 20px;
+            color: var(--text-light);
+            font-size: 15px;
+        }
+
+        /* --- Contact & Location --- */
+        #contact {
+            background: var(--bg-color);
+        }
+
+        .contact-container {
+            display: grid;
+            grid-template-columns: 1fr 1.5fr;
+            gap: 50px;
+            background: var(--glass-bg);
+            backdrop-filter: blur(10px);
+            border-radius: 30px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            border: 1px solid var(--glass-border);
+        }
+
+        .contact-info {
+            padding: 50px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .info-item {
+            margin-bottom: 30px;
+        }
+
+        .info-item h4 {
+            font-size: 20px;
+            color: var(--primary);
+            margin-bottom: 10px;
+        }
+
+        .info-item p {
+            font-size: 16px;
+            color: var(--text-light);
+        }
+
+        .map-container {
+            height: 100%;
+            min-height: 400px;
+        }
+
+        .map-container iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        /* --- Footer --- */
+        footer {
+            background: var(--text-dark);
+            color: var(--white);
+            text-align: center;
+            padding: 30px 20px;
+            font-size: 14px;
+            letter-spacing: 1px;
+        }
+
+        /* --- Responsive Design --- */
+        @media (max-width: 992px) {
+            .contact-container {
+                grid-template-columns: 1fr;
+            }
+            .about-glass-card {
+                padding: 40px;
+                margin-top: -100px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            nav {
+                padding: 15px 20px;
+            }
+            .nav-links {
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background: var(--glass-bg);
+                backdrop-filter: blur(15px);
+                flex-direction: column;
+                align-items: center;
+                gap: 0;
+                max-height: 0;
+                overflow: hidden;
+                transition: max-height 0.4s ease;
+            }
+            .nav-links.active {
+                max-height: 300px;
+            }
+            .nav-links a {
+                padding: 15px 0;
+                width: 100%;
+                text-align: center;
+                border-bottom: 1px solid rgba(0,0,0,0.05);
+            }
+            .mobile-menu-btn {
+                display: block;
+            }
+            .hero-content h1 {
+                font-size: 42px;
+            }
+            section {
+                padding: 80px 5vw;
+            }
+            .section-title {
+                font-size: 32px;
+            }
+        }
     </style>
-  </head>
+</head>
+<body>
 
-  <body>
-    <!-- Navbar -->
-    <nav>
-      <ul>
-        <li><a href="#services">Services</a></li>
-        <li><a href="#gallery">Gallery</a></li>
-        <li><a href="#specials">Specials</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
+    <!-- Navigation -->
+    <nav id="navbar">
+        <a href="#home" class="logo">Asian Charm</a>
+        <button class="mobile-menu-btn">☰</button>
+        <div class="nav-links">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#services">Services</a>
+            <a href="#testimonials">Reviews</a>
+            <a href="#faq">FAQ</a>
+            <a href="#contact">Contact</a>
+        </div>
     </nav>
 
-    <!-- Home Section -->
-    <section id="home" class="home">
-      <div class="home-content">
-        <h1>King Foot Massage</h1>
-        <p class="spa-tagline">Your sanctuary of tranquility and rejuvenation</p>
-      </div>
-
-      <!-- Call and Book Online Cards -->
-      <div class="contact-buttons">
-        <!-- Call Card -->
-        <div class="contact-card">
-          <h3>📞 Call for Appointment</h3>
-          <a href="tel:+1-469-639-0889" class="phone-number">469-639-0889</a>
-          <p>Speak directly with our friendly staff to schedule your perfect massage experience within 30 minutes.</p>
+    <!-- Hero Section -->
+    <section id="home">
+        <div class="hero-bg-carousel" id="heroCarousel" data-speed="0.4">
+            <!-- Backgrounds populated via JS -->
         </div>
-
-        <!-- Book Online Card -->
-        <div class="contact-card">
-          <h3>💻 Book Online</h3>
-          <button class="book-button" onclick="showBookingForm()">Schedule Now</button>
-          <p>Use our convenient online form and we'll confirm your appointment within 30 minutes.</p>
+        <div class="hero-content parallax-element" data-speed="-0.3">
+            <h1>Sanctuary of Serenity</h1>
+            <p>Experience the ultimate relaxation and professional therapy at Asian Charm Spa.</p>
+            <a href="#contact" class="btn">Book Now</a>
         </div>
-      </div>
+    </section>
 
-      <!-- Booking Form (Initially Hidden) -->
-      <div id="bookingForm" class="booking-form">
-        <button class="close-form" onclick="hideBookingForm()">&times;</button>
-        <h3>Schedule Your Visit</h3>
-        <form onsubmit="submitBooking(event)">
-          <div class="form-row">
-            <div class="form-group">
-              <label for="firstName">First Name *</label>
-              <input type="text" id="firstName" name="firstName" required>
-            </div>
-            <div class="form-group">
-              <label for="lastName">Last Name *</label>
-              <input type="text" id="lastName" name="lastName" required>
-            </div>
-          </div>
-
-          <div class="form-group">
-            <label for="phone">Phone Number *</label>
-            <input type="tel" id="phone" name="phone" required>
-          </div>
-
-          <div class="form-group">
-            <label for="email">Email Address</label>
-            <input type="email" id="email" name="email">
-          </div>
-
-          <div class="form-group">
-            <label for="people">Number of People *</label>
-            <select id="people" name="people" required>
-              <option value="">Select Number</option>
-              <option value="1">1 Person</option>
-              <option value="2">2 People</option>
-              <option value="3">3 People</option>
-              <option value="4">4 People</option>
-              <option value="5+">5+ People (Call for Group Booking)</option>
-            </select>
-          </div>
-
-          <div class="form-row">
-            <div class="form-group">
-              <label for="date">Preferred Date *</label>
-              <input type="date" id="date" name="date" required>
-            </div>
-            <div class="form-group">
-              <label for="time">Preferred Time *</label>
-              <input type="time" id="time" name="time" min="09:00" max="22:00" required>
-            </div>
-          </div>
-
-          <div class="form-group">
-            <label for="service">Preferred Service</label>
-            <select id="service" name="service">
-              <option value="">Select a Service</option>
-              <option value="Full Body Massage (Swedish/Deep Tissue) - 30min">Full Body Massage (30min) - $50 Cash/$55 Card</option>
-              <option value="Full Body Massage (Swedish/Deep Tissue) - 60min">Full Body Massage (60min) - $70 Cash/$75 Card</option>
-              <option value="Full Body Massage (Swedish/Deep Tissue) - 90min">Full Body Massage (90min) - $100 Cash/$105 Card</option>
-              <option value="Combo Special (Body+Foot) - 60min">Combo Special (Body+Foot) 60min - $70 Cash/$75 Card</option>
-              <option value="Combo Special (Body+Foot) - 90min">Combo Special (Body+Foot) 90min - $100 Cash/$105 Card</option>
-              <option value="Foot Massage (cloth on) - 30min">Foot Massage (30min) - $35 Cash/$40 Card</option>
-              <option value="Foot Massage (Head+Arm+Foot+Back) - 60min">Foot Massage (Head+Arm+Foot+Back) 60min - $60 Cash/$65 Card</option>
-              <option value="Foot Massage (Head+Arm+Foot+Back) - 90min">Foot Massage (Head+Arm+Foot+Back) 90min - $90 Cash/$95 Card</option>
-              <option value="Chair Massage - 15min">Chair Massage (15min) - $20</option>
-              <option value="Chair Massage - 20min">Chair Massage (20min) - $30</option>
-              <option value="Chair Massage - 30min">Chair Massage (30min) - $40</option>
-            </select>
-          </div>
-
-          <div class="form-group">
-            <label for="addons">Add-ons (Optional)</label>
-            <select id="addons" name="addons" multiple>
-              <option value="Hot Stone (+$10)">Hot Stone (+$10)</option>
-              <option value="Essential Oil (+$10)">Essential Oil (+$10)</option>
-              <option value="CBD Oil/Cream (+$10)">CBD Oil/Cream (+$10)</option>
-            </select>
-            <small style="color: #666;">Hold Ctrl (PC) or Cmd (Mac) to select multiple options</small>
-          </div>
-
-          <div class="form-group">
-            <label for="notes">Special Requests</label>
-            <textarea id="notes" name="notes" rows="3" placeholder="Any preferences, health considerations, or special requests..."></textarea>
-          </div>
-
-          <button type="submit" class="submit-btn">Request Appointment</button>
-          <p style="font-size: 0.9rem; color: #777; margin-top: 15px; text-align: center;">
-            We'll contact you within 30 minutes to confirm your appointment details.
-          </p>
-        </form>
-      </div>
+    <!-- About Us Section -->
+    <section id="about">
+        <div class="decoration dec-1 parallax-element" data-speed="0.1"></div>
+        <div class="decoration dec-2 parallax-element" data-speed="-0.2"></div>
+        <div class="about-glass-card reveal">
+            <h2 class="section-title">Our Philosophy</h2>
+            <span class="section-subtitle">A Haven of Peace</span>
+            <p>At Asian Charm Spa, we are dedicated to providing a completely serene, spotless, and deeply private sanctuary. We believe that true healing begins in a calming environment.</p>
+            <p>Every detail of our space is curated to silence the noise of the outside world, allowing you to achieve ultimate relaxation and emerge completely revitalized.</p>
+        </div>
     </section>
 
     <!-- Services Section -->
     <section id="services">
-      <h2>Our Massage Services</h2>
-      <h4>Hover or tap for detailed pricing information</h4>
-      <div class="services">
-        <div class="service-box">
-          <h3>Full Body Massage</h3>
-          <p>
-            Choose between Swedish relaxation or Deep Tissue therapy massage to target your specific needs and preferences.
-          </p>
-          <div class="price-wrapper">
-            <h4>30 min: $50 Cash / $55 Card</h4>
-            <h4>60 min: $70 Cash / $75 Card</h4>
-            <h4>90 min: $100 Cash / $105 Card</h4>
-          </div>
-        </div>
+        <h2 class="section-title reveal">Services & Pricing</h2>
+        <span class="section-subtitle reveal">Tailored for your wellness</span>
+        
+        <div class="services-grid">
+            
+            <!-- Body Massage Card -->
+            <div class="service-card reveal">
+                <div class="carousel-container" id="carousel-body"></div>
+                <div class="card-content">
+                    <h3>Body Massage</h3>
+                    <p class="card-desc">Relieve stress, improve circulation, and soothe aching muscles with our comprehensive full-body treatment designed for total relaxation.</p>
+                    <ul class="pricing-list">
+                        <li><span>30 Mins</span><span>$50</span></li>
+                        <li><span>60 Mins</span><span>$70</span></li>
+                        <li><span>75 Mins</span><span>$90</span></li>
+                        <li><span>90 Mins</span><span>$110</span></li>
+                        <span class="note">* 90 Mins Includes Free Hot Stone</span>
+                    </ul>
+                </div>
+            </div>
 
-        <div class="service-box">
-          <h3>Combo Special (Body + Foot)</h3>
-          <p>
-            Get the best of both worlds with our combination massage that includes both body and foot massage for complete relaxation.
-          </p>
-          <div class="price-wrapper">
-            <h4>60 min: $70 Cash / $75 Card</h4>
-            <h4>90 min: $100 Cash / $105 Card</h4>
-          </div>
-        </div>
+            <!-- Deep Tissue Card -->
+            <div class="service-card reveal" style="transition-delay: 0.1s;">
+                <div class="carousel-container" id="carousel-deep"></div>
+                <div class="card-content">
+                    <h3>Deep Tissue</h3>
+                    <p class="card-desc">Target chronic muscle tension and knots. Ideal for athletes or those experiencing stiffness in the deeper layers of muscle tissue.</p>
+                    <ul class="pricing-list">
+                        <li><span>60 Mins</span><span>$80</span></li>
+                        <li><span>90 Mins</span><span>$120</span></li>
+                    </ul>
+                </div>
+            </div>
 
-        <div class="service-box">
-          <h3>Foot Massage</h3>
-          <p>
-            Our signature foot massage with cloth on, or comprehensive treatment including Head, Arm, Foot and Back massage.
-          </p>
-          <div class="price-wrapper">
-            <h4>30 min (cloth on): $35 Cash / $40 Card</h4>
-            <h4>60 min (Head+Arm+Foot+Back): $60 Cash / $65 Card</h4>
-            <h4>90 min (Head+Arm+Foot+Back): $90 Cash / $95 Card</h4>
-          </div>
-        </div>
+            <!-- Foot Massage Card -->
+            <div class="service-card reveal" style="transition-delay: 0.2s;">
+                <div class="carousel-container" id="carousel-foot"></div>
+                <div class="card-content">
+                    <h3>Foot Massage</h3>
+                    <p class="card-desc">Restore energy balance and soothe tired feet through targeted reflexology techniques that benefit the entire body.</p>
+                    <ul class="pricing-list">
+                        <li><span>30 Mins</span><span>$40</span></li>
+                        <li><span>60 Mins</span><span>$70</span></li>
+                    </ul>
+                </div>
+            </div>
 
-        <div class="service-box">
-          <h3>Chair Massage</h3>
-          <p>
-            Quick and convenient chair massage perfect for targeting neck, shoulders, and back tension during your busy day.
-          </p>
+            <!-- Combination Massage Card -->
+            <div class="service-card reveal" style="transition-delay: 0.3s;">
+                <div class="carousel-container" id="carousel-combo"></div>
+                <div class="card-content">
+                    <h3>Combination Massage</h3>
+                    <p class="card-desc">Experience the best of both worlds. A perfectly balanced session combining full-body relaxation with focused foot reflexology.</p>
+                    <ul class="pricing-list">
+                        <li><span>30 Min Body + 30 Min Foot</span><span>$70</span></li>
+                        <li><span>60 Min Body + 30 Min Foot</span><span>$105</span></li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials">
+        <h2 class="section-title reveal">Client Testimonials</h2>
+        <span class="section-subtitle reveal">What they say about us</span>
+
+        <div class="marquee-wrapper">
+            <!-- Row 1: Left Scroll -->
+            <div class="marquee">
+                <div class="marquee-content" id="marquee-row-1">
+                    <!-- JS will populate -->
+                </div>
+                <div class="marquee-content" id="marquee-row-1-clone" aria-hidden="true">
+                    <!-- Clone for infinite scroll -->
+                </div>
+            </div>
+            
+            <!-- Row 2: Right Scroll (Reverse) -->
+            <div class="marquee">
+                <div class="marquee-content reverse" id="marquee-row-2">
+                    <!-- JS will populate -->
+                </div>
+                <div class="marquee-content reverse" id="marquee-row-2-clone" aria-hidden="true">
+                    <!-- Clone for infinite scroll -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq">
+        <h2 class="section-title reveal">Frequently Asked Questions</h2>
+        <span class="section-subtitle reveal">Everything you need to know</span>
+
+        <div class="faq-container reveal">
+            <div class="faq-item">
+                <button class="faq-question">How early should I arrive?</button>
+                <div class="faq-answer">
+                    <p>We recommend arriving at least 10-15 minutes before your scheduled appointment. This allows you ample time to check in, use the restroom, and begin unwinding before your session starts.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">Can I get a massage if I have an injury?</button>
+                <div class="faq-answer">
+                    <p>It depends on the nature and recency of the injury. Please consult with your physician first. If cleared, inform us before booking so we can adapt the pressure and techniques to avoid the injured area and ensure your safety.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">What is your cancellation policy?</button>
+                <div class="faq-answer">
+                    <p>We kindly ask for at least 24 hours' notice if you need to cancel or reschedule your appointment. This allows us to offer the time slot to other clients.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">Is there parking available?</button>
+                <div class="faq-answer">
+                    <p>Yes, we have dedicated parking available for our clients right outside our spa premises for your convenience.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact & Location Section -->
+    <section id="contact">
+        <div class="decoration dec-1 parallax-element" data-speed="0.15"></div>
+        <h2 class="section-title reveal">Visit Us</h2>
+        <span class="section-subtitle reveal">Book your relaxation today</span>
+
+        <div class="contact-container reveal">
+            <div class="contact-info">
+                <div class="info-item">
+                    <h4>Location</h4>
+                    <p>7910 SE King Road, #1<br>Portland, OR 97222</p>
+                </div>
+                <div class="info-item">
+                    <h4>Contact</h4>
+                    <p>Call us to book: <br><strong>(971) 997-4163</strong></p>
+                </div>
+                <div class="info-item">
+                    <h4>Hours of Operation</h4>
+                    <p>Monday - Sunday<br>8:00 AM - 10:00 PM</p>
+                </div>
+            </div>
+            <div class="map-container">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2797.900989397241!2d-122.58390888444219!3d45.47175517910103!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5495758cf142f36b%3A0xc6c7bba4c46f1406!2s7910%20SE%20King%20Rd%20%231%2C%20Portland%2C%20OR%2097222!5e0!3m2!1sen!2sus!4v1685000000000!5m2!1sen!2sus" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Asian Charm Spa. All Rights Reserved.</p>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // --- Image Data Pools ---
+        const footImages = [
+            "https://i.pinimg.com/1200x/6a/df/fe/6adffe5706bdce88dd2d2d0fc6875398.jpg",
+            "https://i.pinimg.com/1200x/71/a4/b7/71a4b75a19fbadf33bc6dc340e91340c.jpg",
+            "https://i.pinimg.com/1200x/2b/85/42/2b8542fd0d099c9771bb5b332d6f51a9.jpg",
+            "https://i.pinimg.com/736x/76/48/7c/76487c07076e4b41fcce7c4ea35e2005.jpg",
+            "https://i.pinimg.com/1200x/6a/a8/16/6aa81653401306ff6509eeea39b0d422.jpg"
+        ];
+
+        const bodyImages = [
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1L-0O6Juxasb8QicSAXdnWLSQjLrVvGVr8HPij_dvsgW7cWCeMVBGB-12hqGhPUkx5oA&usqp=CAU",
+            "https://i.pinimg.com/1200x/dc/36/fe/dc36feaf9cc11bec29cc3de7834c539e.jpg",
+            "https://i.pinimg.com/736x/4c/2b/cb/4c2bcb39fbc7189277e8e505c2e1bc8f.jpg",
+            "https://i.pinimg.com/736x/c0/e8/3f/c0e83fc3058518c785d6cfe1b15da601.jpg",
+            "https://i.pinimg.com/736x/21/8f/4c/218f4cd988ca278667bd28ff54a577ff.jpg"
+        ];
+
+        const deepImages = [
+            "https://i.pinimg.com/736x/86/47/ef/8647ef5b51553a8e57ca32e6b2ec74f0.jpg",
+            "https://i.pinimg.com/736x/a4/c5/f0/a4c5f0fb2704f75aa94a247e18a4af14.jpg",
+            "https://i.pinimg.com/736x/85/e4/e0/85e4e0455458e84ff5b39582cf45a340.jpg",
+            "https://i.pinimg.com/1200x/cb/a2/38/cba2382cc3ca28d467b85d939121c8ef.jpg"
+        ];
+
+        // Combination uses a mix from body and foot strictly
+        const comboImages = [
+            bodyImages[2],
+            footImages[2],
+            bodyImages[3],
+            footImages[3]
+        ];
+
+        // --- Setup Image Carousels ---
+        function setupCarousel(containerId, imageArray, intervalTime = 3000) {
+            const container = document.getElementById(containerId);
+            if (!container) return;
+
+            imageArray.forEach((src, index) => {
+                const img = document.createElement('img');
+                img.src = src;
+                if (index === 0) img.classList.add('active');
+                container.appendChild(img);
+            });
+
+            const images = container.querySelectorAll('img');
+            let currentIndex = 0;
+
+            if (images.length > 1) {
+                setInterval(() => {
+                    images[currentIndex].classList.remove('active');
+                    currentIndex = (currentIndex + 1) % images.length;
+                    images[currentIndex].classList.add('active');
+                }, intervalTime);
+            }
+        }
+
+        // Initialize Service Carousels
+        setupCarousel('carousel-body', bodyImages, 4000);
+        setupCarousel('carousel-deep', deepImages, 4500);
+        setupCarousel('carousel-foot', footImages, 3500);
+        setupCarousel('carousel-combo', comboImages, 5000);
+
+        // Initialize Hero Background Carousel (Mix of pool images for ambiance)
+        const heroImages = [bodyImages[1], footImages[0], bodyImages[4], deepImages[1]];
+        setupCarousel('heroCarousel', heroImages, 5000);
+
+        // --- Navbar Scroll Effect & Mobile Menu ---
+        const navbar = document.getElementById('navbar');
+        const mobileBtn = document.querySelector('.mobile-menu-btn');
+        const navLinks = document.querySelector('.nav-links');
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        mobileBtn.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+            });
+        });
+
+        // --- Parallax Scrolling Effect ---
+        window.addEventListener('scroll', () => {
+            const scrollY = window.scrollY;
+            
+            // Hero background parallax
+            const heroBg = document.getElementById('heroCarousel');
+            if (heroBg) {
+                const speed = heroBg.getAttribute('data-speed');
+                heroBg.style.transform = `translateY(${scrollY * speed}px)`;
+            }
+
+            // Other elements parallax
+            document.querySelectorAll('.parallax-element').forEach(el => {
+                const speed = el.getAttribute('data-speed');
+                // Only apply if element is somewhat in viewport to save performance
+                const rect = el.getBoundingClientRect();
+                if(rect.top < window.innerHeight && rect.bottom > 0) {
+                    el.style.transform = `translateY(${scrollY * speed}px)`;
+                }
+            });
+        });
+
+        // --- Scroll Reveal Animation ---
+        const revealOptions = {
+            threshold: 0.15,
+            rootMargin: "0px 0px -50px 0px"
+        };
+
+        const revealObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, revealOptions);
+
+        document.querySelectorAll('.reveal').forEach(el => {
+            revealObserver.observe(el);
+        });
+
+        // --- Testimonials Generator ---
+        const reviews = [
+            { name: "Sarah M.", text: "Absolutely incredible experience. The ambiance is so peaceful and clean." },
+            { name: "John D.", text: "The deep tissue massage relieved all my back pain. Highly professional." },
+            { name: "Emily R.", text: "I tried the combination massage. It was exactly what I needed after a long week." },
+            { name: "Michael B.", text: "Very relaxing and quiet environment. The therapists truly know what they are doing." },
+            { name: "Jessica T.", text: "Spotless rooms and wonderful service. I will definitely be coming back." },
+            { name: "David L.", text: "Best foot massage I've had in Portland! Highly recommended to anyone." },
+            { name: "Amanda W.", text: "A hidden gem. The hot stones included in the 90-min session were divine." },
+            { name: "Chris P.", text: "Very accommodating and polite. The facility is top-notch and calming." },
+            { name: "Rachel K.", text: "From the moment you walk in, the stress melts away. 5 stars!" },
+            { name: "Mark S.", text: "Perfect pressure and great technique. Very professional setup." }
+        ];
+
+        function createReviewCard(review) {
+            return `
+                <div class="review-card">
+                    <div class="stars">★★★★★</div>
+                    <p class="review-text">"${review.text}"</p>
+                    <p class="reviewer">- ${review.name}</p>
+                </div>
+            `;
+        }
+
+        const row1 = document.getElementById('marquee-row-1');
+        const row1Clone = document.getElementById('marquee-row-1-clone');
+        const row2 = document.getElementById('marquee-row-2');
+        const row2Clone = document.getElementById('marquee-row-2-clone');
+
+        // Split reviews into two rows
+        const half = Math.ceil(reviews.length / 2);
+        const reviewsRow1 = reviews.slice(0, half);
+        const reviewsRow2 = reviews.slice(half);
+
+        function populateMarquee(container, cloneContainer, reviewData) {
+            const html = reviewData.map(createReviewCard).join('');
+            container.innerHTML = html;
+            cloneContainer.innerHTML = html;
+        }
+
+        populateMarquee(row1, row1Clone, reviewsRow1);
+        populateMarquee(row2, row2Clone, reviewsRow2);
+
+        // --- FAQ Accordion ---
+        const faqQuestions = document.querySelectorAll('.faq-question');
+        faqQuestions.forEach(question => {
+            question.addEventListener('click', () => {
+                const isActive = question.classList.contains('active');
+                
+                // Close all
+                faqQuestions.forEach(q => {
+                    q.classList.remove('active');
+                    q.nextElementSibling.style.maxHeight = null;
+                });
+
+                // Open clicked if it wasn't active
+                if (!isActive) {
+                    question.classList.add('active');
+                    const answer = question.nextElementSibling;
+                    answer.style.maxHeight = answer.scrollHeight + "px";
+                }
+            });
+        });
+
+    </script>
+</body>
+</html>
