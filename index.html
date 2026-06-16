@@ -7,9 +7,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
     <style>
         :root {
-            --primary: #9b7e56; /* Soft gold/bronze */
+            --primary: #9b7e56;
             --primary-dark: #7a6140;
-            --bg-color: #f9f8f6; /* Soft beige */
+            --bg-color: #f9f8f6;
             --text-dark: #2c2a28;
             --text-light: #6e6b66;
             --white: #ffffff;
@@ -39,7 +39,6 @@
             font-weight: 600;
         }
 
-        /* --- Navigation --- */
         nav {
             position: fixed;
             top: 0;
@@ -100,7 +99,6 @@
             color: var(--text-dark);
         }
 
-        /* --- Hero Section --- */
         #home {
             position: relative;
             height: 100vh;
@@ -115,7 +113,7 @@
             top: 0;
             left: 0;
             width: 100%;
-            height: 120%; /* Extra height for parallax */
+            height: 120%;
             z-index: -1;
         }
 
@@ -140,7 +138,6 @@
             color: var(--white);
             max-width: 800px;
             padding: 0 20px;
-            /* Parallax applied via JS */
         }
 
         .hero-content h1 {
@@ -181,7 +178,6 @@
             border-color: var(--white);
         }
 
-        /* --- General Sections --- */
         section {
             padding: 100px 10vw;
             position: relative;
@@ -205,18 +201,17 @@
             display: block;
         }
 
-        /* --- Scroll Reveal Animations --- */
         .reveal {
             opacity: 0;
             transform: translateY(40px);
             transition: all 1s cubic-bezier(0.5, 0, 0, 1);
         }
+
         .reveal.active {
             opacity: 1;
             transform: translateY(0);
         }
 
-        /* --- About Us --- */
         #about {
             background: var(--bg-color);
             position: relative;
@@ -233,7 +228,7 @@
             text-align: center;
             box-shadow: var(--shadow);
             max-width: 900px;
-            margin: -150px auto 0; /* Overlap hero */
+            margin: -150px auto 0;
             position: relative;
         }
 
@@ -244,7 +239,6 @@
             margin-bottom: 20px;
         }
 
-        /* --- Decorative Parallax Elements --- */
         .decoration {
             position: absolute;
             border-radius: 50%;
@@ -253,10 +247,21 @@
             z-index: -1;
             filter: blur(40px);
         }
-        .dec-1 { width: 300px; height: 300px; top: 10%; left: -100px; }
-        .dec-2 { width: 400px; height: 400px; bottom: 20%; right: -150px; }
 
-        /* --- Services --- */
+        .dec-1 {
+            width: 300px;
+            height: 300px;
+            top: 10%;
+            left: -100px;
+        }
+
+        .dec-2 {
+            width: 400px;
+            height: 400px;
+            bottom: 20%;
+            right: -150px;
+        }
+
         #services {
             background-color: var(--white);
         }
@@ -350,11 +355,104 @@
             margin-bottom: 8px;
         }
 
-        /* --- Testimonials --- */
+        /* --- Massage Reasons Section --- */
+        .massage-reasons {
+            margin-top: 90px;
+            padding: 55px;
+            border-radius: 32px;
+            background:
+                linear-gradient(135deg, rgba(255,255,255,0.96), rgba(249,248,246,0.88)),
+                url("https://i.pinimg.com/1200x/6a/df/fe/6adffe5706bdce88dd2d2d0fc6875398.jpg");
+            background-size: cover;
+            background-position: center;
+            background-blend-mode: overlay;
+            box-shadow: var(--shadow);
+            border: 1px solid rgba(155,126,86,0.15);
+            overflow: hidden;
+            position: relative;
+        }
+
+        .massage-reasons::before {
+            content: "";
+            position: absolute;
+            width: 260px;
+            height: 260px;
+            right: -90px;
+            top: -90px;
+            border-radius: 50%;
+            background: rgba(155,126,86,0.12);
+            filter: blur(8px);
+        }
+
+        .massage-reasons-header {
+            position: relative;
+            text-align: center;
+            max-width: 820px;
+            margin: 0 auto 38px;
+        }
+
+        .massage-reasons-header h3 {
+            font-size: 40px;
+            color: var(--text-dark);
+            margin-bottom: 12px;
+        }
+
+        .massage-reasons-header p {
+            color: var(--text-light);
+            font-size: 16px;
+        }
+
+        .reasons-grid {
+            position: relative;
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 14px 26px;
+            list-style: none;
+            counter-reset: reason-counter;
+        }
+
+        .reasons-grid li {
+            counter-increment: reason-counter;
+            display: flex;
+            align-items: flex-start;
+            gap: 14px;
+            padding: 14px 16px;
+            background: rgba(255,255,255,0.78);
+            border: 1px solid rgba(155,126,86,0.12);
+            border-radius: 16px;
+            color: var(--text-dark);
+            font-size: 14px;
+            font-weight: 500;
+            box-shadow: 0 6px 18px rgba(0,0,0,0.04);
+            transition: var(--transition);
+        }
+
+        .reasons-grid li:hover {
+            transform: translateY(-4px);
+            border-color: rgba(155,126,86,0.35);
+            box-shadow: 0 10px 26px rgba(0,0,0,0.08);
+        }
+
+        .reasons-grid li::before {
+            content: counter(reason-counter);
+            flex: 0 0 32px;
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            background: var(--primary);
+            color: var(--white);
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 13px;
+            font-weight: 600;
+            margin-top: -4px;
+        }
+
         #testimonials {
             background: var(--bg-color);
             overflow: hidden;
-            padding: 100px 0; /* Full width for marquee */
+            padding: 100px 0;
         }
 
         .marquee-wrapper {
@@ -385,13 +483,21 @@
         }
 
         @keyframes scroll-left {
-            from { transform: translateX(0); }
-            to { transform: translateX(-100%); }
+            from {
+                transform: translateX(0);
+            }
+            to {
+                transform: translateX(-100%);
+            }
         }
 
         @keyframes scroll-right {
-            from { transform: translateX(-100%); }
-            to { transform: translateX(0); }
+            from {
+                transform: translateX(-100%);
+            }
+            to {
+                transform: translateX(0);
+            }
         }
 
         .review-card {
@@ -423,7 +529,6 @@
             color: var(--text-dark);
         }
 
-        /* --- FAQ --- */
         #faq {
             background: var(--white);
             max-width: 900px;
@@ -479,7 +584,6 @@
             font-size: 15px;
         }
 
-        /* --- Contact & Location --- */
         #contact {
             background: var(--bg-color);
         }
@@ -529,7 +633,6 @@
             border: none;
         }
 
-        /* --- Footer --- */
         footer {
             background: var(--text-dark);
             color: var(--white);
@@ -539,14 +642,22 @@
             letter-spacing: 1px;
         }
 
-        /* --- Responsive Design --- */
         @media (max-width: 992px) {
             .contact-container {
                 grid-template-columns: 1fr;
             }
+
             .about-glass-card {
                 padding: 40px;
                 margin-top: -100px;
+            }
+
+            .massage-reasons {
+                padding: 42px 28px;
+            }
+
+            .reasons-grid {
+                grid-template-columns: 1fr;
             }
         }
 
@@ -554,6 +665,7 @@
             nav {
                 padding: 15px 20px;
             }
+
             .nav-links {
                 position: absolute;
                 top: 100%;
@@ -568,33 +680,46 @@
                 overflow: hidden;
                 transition: max-height 0.4s ease;
             }
+
             .nav-links.active {
                 max-height: 300px;
             }
+
             .nav-links a {
                 padding: 15px 0;
                 width: 100%;
                 text-align: center;
                 border-bottom: 1px solid rgba(0,0,0,0.05);
             }
+
             .mobile-menu-btn {
                 display: block;
             }
+
             .hero-content h1 {
                 font-size: 42px;
             }
+
             section {
                 padding: 80px 5vw;
             }
+
             .section-title {
                 font-size: 32px;
+            }
+
+            .massage-reasons-header h3 {
+                font-size: 32px;
+            }
+
+            .reasons-grid li {
+                font-size: 13px;
             }
         }
     </style>
 </head>
 <body>
 
-    <!-- Navigation -->
     <nav id="navbar">
         <a href="#home" class="logo">Asian Charm</a>
         <button class="mobile-menu-btn">☰</button>
@@ -608,11 +733,8 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
     <section id="home">
-        <div class="hero-bg-carousel" id="heroCarousel" data-speed="0.4">
-            <!-- Backgrounds populated via JS -->
-        </div>
+        <div class="hero-bg-carousel" id="heroCarousel" data-speed="0.4"></div>
         <div class="hero-content parallax-element" data-speed="-0.3">
             <h1>Sanctuary of Serenity</h1>
             <p>Experience the ultimate relaxation and professional therapy at Asian Charm Spa.</p>
@@ -620,7 +742,6 @@
         </div>
     </section>
 
-    <!-- About Us Section -->
     <section id="about">
         <div class="decoration dec-1 parallax-element" data-speed="0.1"></div>
         <div class="decoration dec-2 parallax-element" data-speed="-0.2"></div>
@@ -632,14 +753,12 @@
         </div>
     </section>
 
-    <!-- Services Section -->
     <section id="services">
         <h2 class="section-title reveal">Services & Pricing</h2>
         <span class="section-subtitle reveal">Tailored for your wellness</span>
-        
+
         <div class="services-grid">
-            
-            <!-- Body Massage Card -->
+
             <div class="service-card reveal">
                 <div class="carousel-container" id="carousel-body"></div>
                 <div class="card-content">
@@ -655,7 +774,6 @@
                 </div>
             </div>
 
-            <!-- Deep Tissue Card -->
             <div class="service-card reveal" style="transition-delay: 0.1s;">
                 <div class="carousel-container" id="carousel-deep"></div>
                 <div class="card-content">
@@ -668,7 +786,6 @@
                 </div>
             </div>
 
-            <!-- Foot Massage Card -->
             <div class="service-card reveal" style="transition-delay: 0.2s;">
                 <div class="carousel-container" id="carousel-foot"></div>
                 <div class="card-content">
@@ -681,7 +798,6 @@
                 </div>
             </div>
 
-            <!-- Combination Massage Card -->
             <div class="service-card reveal" style="transition-delay: 0.3s;">
                 <div class="carousel-container" id="carousel-combo"></div>
                 <div class="card-content">
@@ -695,37 +811,60 @@
             </div>
 
         </div>
+
+        <div class="massage-reasons reveal" id="massage-reasons">
+            <div class="massage-reasons-header">
+                <h3>25 Reasons to Get a Massage</h3>
+                <p>Massage therapy may support relaxation, comfort, mobility, and overall wellness.</p>
+            </div>
+
+            <ol class="reasons-grid">
+                <li>Relieve stress</li>
+                <li>Relieve postoperative pain</li>
+                <li>Reduce anxiety</li>
+                <li>Manage low-back pain</li>
+                <li>Help fibromyalgia pain</li>
+                <li>Reduce muscle tension</li>
+                <li>Enhance exercise performance</li>
+                <li>Relieve tension headaches</li>
+                <li>Sleep better</li>
+                <li>Ease symptoms of depression</li>
+                <li>Improve cardiovascular health</li>
+                <li>Reduce pain of osteoarthritis</li>
+                <li>Decrease stress in cancer patients</li>
+                <li>Improve balance in older adults</li>
+                <li>Decrease rheumatoid arthritis pain</li>
+                <li>Temper effects of dementia</li>
+                <li>Promote relaxation</li>
+                <li>Lower blood pressure</li>
+                <li>Decrease symptoms of Carpal Tunnel Syndrome</li>
+                <li>Help chronic neck pain</li>
+                <li>Lower joint replacement pain</li>
+                <li>Increase range of motion</li>
+                <li>Decrease migraine frequency</li>
+                <li>Improve quality of life in hospice care</li>
+                <li>Reduce chemotherapy-related nausea</li>
+            </ol>
+        </div>
     </section>
 
-    <!-- Testimonials Section -->
     <section id="testimonials">
         <h2 class="section-title reveal">Client Testimonials</h2>
         <span class="section-subtitle reveal">What they say about us</span>
 
         <div class="marquee-wrapper">
-            <!-- Row 1: Left Scroll -->
             <div class="marquee">
-                <div class="marquee-content" id="marquee-row-1">
-                    <!-- JS will populate -->
-                </div>
-                <div class="marquee-content" id="marquee-row-1-clone" aria-hidden="true">
-                    <!-- Clone for infinite scroll -->
-                </div>
+                <div class="marquee-content" id="marquee-row-1"></div>
+                <div class="marquee-content" id="marquee-row-1-clone" aria-hidden="true"></div>
             </div>
-            
-            <!-- Row 2: Right Scroll (Reverse) -->
+
             <div class="marquee">
-                <div class="marquee-content reverse" id="marquee-row-2">
-                    <!-- JS will populate -->
-                </div>
-                <div class="marquee-content reverse" id="marquee-row-2-clone" aria-hidden="true">
-                    <!-- Clone for infinite scroll -->
-                </div>
+                <div class="marquee-content reverse" id="marquee-row-2"></div>
+                <div class="marquee-content reverse" id="marquee-row-2-clone" aria-hidden="true"></div>
             </div>
         </div>
     </section>
 
-    <!-- FAQ Section -->
     <section id="faq">
         <h2 class="section-title reveal">Frequently Asked Questions</h2>
         <span class="section-subtitle reveal">Everything you need to know</span>
@@ -737,18 +876,21 @@
                     <p>We recommend arriving at least 10-15 minutes before your scheduled appointment. This allows you ample time to check in, use the restroom, and begin unwinding before your session starts.</p>
                 </div>
             </div>
+
             <div class="faq-item">
                 <button class="faq-question">Can I get a massage if I have an injury?</button>
                 <div class="faq-answer">
                     <p>It depends on the nature and recency of the injury. Please consult with your physician first. If cleared, inform us before booking so we can adapt the pressure and techniques to avoid the injured area and ensure your safety.</p>
                 </div>
             </div>
+
             <div class="faq-item">
                 <button class="faq-question">What is your cancellation policy?</button>
                 <div class="faq-answer">
                     <p>We kindly ask for at least 24 hours' notice if you need to cancel or reschedule your appointment. This allows us to offer the time slot to other clients.</p>
                 </div>
             </div>
+
             <div class="faq-item">
                 <button class="faq-question">Is there parking available?</button>
                 <div class="faq-answer">
@@ -758,7 +900,6 @@
         </div>
     </section>
 
-    <!-- Contact & Location Section -->
     <section id="contact">
         <div class="decoration dec-1 parallax-element" data-speed="0.15"></div>
         <h2 class="section-title reveal">Visit Us</h2>
@@ -770,15 +911,18 @@
                     <h4>Location</h4>
                     <p>7910 SE King Road, #1<br>Portland, OR 97222</p>
                 </div>
+
                 <div class="info-item">
                     <h4>Contact</h4>
                     <p>Call us to book: <br><strong>(971) 997-4163</strong></p>
                 </div>
+
                 <div class="info-item">
                     <h4>Hours of Operation</h4>
                     <p>Monday - Sunday<br>8:00 AM - 10:00 PM</p>
                 </div>
             </div>
+
             <div class="map-container">
                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2797.900989397241!2d-122.58390888444219!3d45.47175517910103!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5495758cf142f36b%3A0xc6c7bba4c46f1406!2s7910%20SE%20King%20Rd%20%231%2C%20Portland%2C%20OR%2097222!5e0!3m2!1sen!2sus!4v1685000000000!5m2!1sen!2sus" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
@@ -789,9 +933,7 @@
         <p>&copy; 2024 Asian Charm Spa. All Rights Reserved.</p>
     </footer>
 
-    <!-- JavaScript -->
     <script>
-        // --- Image Data Pools ---
         const footImages = [
             "https://i.pinimg.com/1200x/6a/df/fe/6adffe5706bdce88dd2d2d0fc6875398.jpg",
             "https://i.pinimg.com/1200x/71/a4/b7/71a4b75a19fbadf33bc6dc340e91340c.jpg",
@@ -815,7 +957,6 @@
             "https://i.pinimg.com/1200x/cb/a2/38/cba2382cc3ca28d467b85d939121c8ef.jpg"
         ];
 
-        // Combination uses a mix from body and foot strictly
         const comboImages = [
             bodyImages[2],
             footImages[2],
@@ -823,7 +964,6 @@
             footImages[3]
         ];
 
-        // --- Setup Image Carousels ---
         function setupCarousel(containerId, imageArray, intervalTime = 3000) {
             const container = document.getElementById(containerId);
             if (!container) return;
@@ -831,6 +971,7 @@
             imageArray.forEach((src, index) => {
                 const img = document.createElement('img');
                 img.src = src;
+                img.alt = "Massage and spa service";
                 if (index === 0) img.classList.add('active');
                 container.appendChild(img);
             });
@@ -847,17 +988,14 @@
             }
         }
 
-        // Initialize Service Carousels
         setupCarousel('carousel-body', bodyImages, 4000);
         setupCarousel('carousel-deep', deepImages, 4500);
         setupCarousel('carousel-foot', footImages, 3500);
         setupCarousel('carousel-combo', comboImages, 5000);
 
-        // Initialize Hero Background Carousel (Mix of pool images for ambiance)
         const heroImages = [bodyImages[1], footImages[0], bodyImages[4], deepImages[1]];
         setupCarousel('heroCarousel', heroImages, 5000);
 
-        // --- Navbar Scroll Effect & Mobile Menu ---
         const navbar = document.getElementById('navbar');
         const mobileBtn = document.querySelector('.mobile-menu-btn');
         const navLinks = document.querySelector('.nav-links');
@@ -880,29 +1018,25 @@
             });
         });
 
-        // --- Parallax Scrolling Effect ---
         window.addEventListener('scroll', () => {
             const scrollY = window.scrollY;
-            
-            // Hero background parallax
+
             const heroBg = document.getElementById('heroCarousel');
             if (heroBg) {
                 const speed = heroBg.getAttribute('data-speed');
                 heroBg.style.transform = `translateY(${scrollY * speed}px)`;
             }
 
-            // Other elements parallax
             document.querySelectorAll('.parallax-element').forEach(el => {
                 const speed = el.getAttribute('data-speed');
-                // Only apply if element is somewhat in viewport to save performance
                 const rect = el.getBoundingClientRect();
-                if(rect.top < window.innerHeight && rect.bottom > 0) {
+
+                if (rect.top < window.innerHeight && rect.bottom > 0) {
                     el.style.transform = `translateY(${scrollY * speed}px)`;
                 }
             });
         });
 
-        // --- Scroll Reveal Animation ---
         const revealOptions = {
             threshold: 0.15,
             rootMargin: "0px 0px -50px 0px"
@@ -921,7 +1055,6 @@
             revealObserver.observe(el);
         });
 
-        // --- Testimonials Generator ---
         const reviews = [
             { name: "Sarah M.", text: "Absolutely incredible experience. The ambiance is so peaceful and clean." },
             { name: "John D.", text: "The deep tissue massage relieved all my back pain. Highly professional." },
@@ -950,7 +1083,6 @@
         const row2 = document.getElementById('marquee-row-2');
         const row2Clone = document.getElementById('marquee-row-2-clone');
 
-        // Split reviews into two rows
         const half = Math.ceil(reviews.length / 2);
         const reviewsRow1 = reviews.slice(0, half);
         const reviewsRow2 = reviews.slice(half);
@@ -964,19 +1096,17 @@
         populateMarquee(row1, row1Clone, reviewsRow1);
         populateMarquee(row2, row2Clone, reviewsRow2);
 
-        // --- FAQ Accordion ---
         const faqQuestions = document.querySelectorAll('.faq-question');
+
         faqQuestions.forEach(question => {
             question.addEventListener('click', () => {
                 const isActive = question.classList.contains('active');
-                
-                // Close all
+
                 faqQuestions.forEach(q => {
                     q.classList.remove('active');
                     q.nextElementSibling.style.maxHeight = null;
                 });
 
-                // Open clicked if it wasn't active
                 if (!isActive) {
                     question.classList.add('active');
                     const answer = question.nextElementSibling;
@@ -984,7 +1114,6 @@
                 }
             });
         });
-
     </script>
 </body>
 </html>
